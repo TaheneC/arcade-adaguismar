@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Explore e compartilhe os jogos criados no Colégio Estadual Adaguismar de Oliveira.">
+<title>Arcade Adaguismar</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="catalogo.js"></script>
+<script defer src="portal.js"></script>
+</head>
+<body>
+<a class="skip" href="#catalogo">Ir para o catálogo</a>
+<header><nav class="wrap" aria-label="Principal">
+<a class="brand" href="#"><span aria-hidden="true">✦</span> ARCADE<small>ADAGUISMAR</small></a>
+<div class="navlinks"><a href="#catalogo">Catálogo</a><a href="#publicar">Como publicar</a></div>
+<a class="button compact" href="#enviar">+ Enviar jogo</a>
+</nav></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="titulo">
+<div class="hero-copy"><p class="school">Colégio Estadual Adaguismar de Oliveira</p>
+<h1 id="titulo">Arcade<br><em>Adaguismar</em></h1>
+<p>Um espaço para jogar, descobrir e compartilhar os jogos criados na nossa escola.</p>
+<a class="button" href="#catalogo">Explorar jogos <span aria-hidden="true">↘</span></a>
+</div>
+<div class="art" aria-hidden="true"><span class="spark one">✦</span><span class="spark two">✧</span><span class="spark three">+</span><div class="controller"><i></i><b></b><b></b></div></div>
+</section>
+<section id="catalogo" class="section" aria-labelledby="catalogo-titulo">
+<div class="section-head"><h2 id="catalogo-titulo">Catálogo de jogos</h2><span id="total" class="count" aria-live="polite"></span></div>
+<div class="filters"><label>Buscar jogos<input id="busca" type="search" placeholder="Nome do jogo ou autoria"></label><label>Categoria<select id="categoria"><option value="">Todas as categorias</option></select></label></div>
+<p id="estado" class="empty" role="status"></p>
+<div id="jogos" class="cards"></div>
+<noscript>Ative o JavaScript para explorar o catálogo.</noscript>
+</section>
+<section id="publicar" class="section guide" aria-labelledby="publicar-titulo">
+<h2 id="publicar-titulo">Como publicar seu jogo</h2>
+<ol><li><strong>Suba os arquivos</strong><p>Crie um repositório no seu GitHub e envie os arquivos do jogo. Inclua um <code>index.html</code> na pasta de publicação.</p></li>
+<li><strong>Ative o GitHub Pages</strong><p>Em <b>Settings → Pages</b>, selecione <b>Deploy from a branch</b>, escolha a branch e a pasta do jogo e salve. Abra o endereço publicado para testar.</p></li>
+<li><strong>Envie para revisão</strong><p>Preencha a ficha com o link do jogo e envie pelo GitHub ou compartilhe o arquivo com quem mantém o portal.</p></li></ol>
+<a href="https://docs.github.com/en/pages/quickstart" target="_blank" rel="noopener noreferrer">Guia oficial do GitHub Pages ↗</a>
+</section>
+<section id="enviar" class="section submission" aria-labelledby="enviar-titulo">
+<h2 id="enviar-titulo">Enviar um jogo</h2>
+<p>Use seu nome de apresentação ou o nome da equipe. A ficha entra no catálogo após revisão.</p>
+<form id="ficha">
+<div class="form-grid">
+<label>Título do jogo<input name="titulo" required maxlength="70"></label>
+<label>Autoria ou equipe<input name="autoria" required maxlength="70"></label>
+<label>Link no GitHub Pages<input name="url" type="url" required placeholder="https://usuario.github.io/meu-jogo/"></label>
+<label>Categoria<select name="categoria" id="ficha-categoria" required><option value="">Selecione uma categoria</option></select></label>
+</div>
+<label>Descrição curta<textarea name="descricao" required maxlength="180" rows="3" placeholder="O que a pessoa vai jogar?"></textarea></label>
+<div class="actions"><button class="button" type="submit">Baixar ficha</button><button class="button secondary" type="submit" id="enviar-github" value="github" hidden>Abrir envio no GitHub ↗</button></div>
+<p id="resultado" role="status"></p>
+</form>
+</section>
+</main>
+<footer><div class="wrap"><strong>Arcade Adaguismar</strong><span>Colégio Estadual Adaguismar de Oliveira</span></div></footer>
+</body>
+</html>
