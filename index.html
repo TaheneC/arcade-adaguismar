@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="description" content="Explore e compartilhe os jogos criados no Colégio Estadual Adaguismar de Oliveira.">
 <title>Arcade Adaguismar</title>
 <link rel="stylesheet" href="style.css">
@@ -36,23 +38,29 @@
 <h2 id="publicar-titulo">Como publicar seu jogo</h2>
 <ol><li><strong>Suba os arquivos</strong><p>Crie um repositório no seu GitHub e envie os arquivos do jogo. Inclua um <code>index.html</code> na pasta de publicação.</p></li>
 <li><strong>Ative o GitHub Pages</strong><p>Em <b>Settings → Pages</b>, selecione <b>Deploy from a branch</b>, escolha a branch e a pasta do jogo e salve. Abra o endereço publicado para testar.</p></li>
-<li><strong>Envie para revisão</strong><p>Preencha a ficha com o link do jogo e envie pelo GitHub ou compartilhe o arquivo com quem mantém o portal.</p></li></ol>
+<li><strong>Envie para revisão</strong><p>Baixe a ficha e entregue ao professor pelo canal privado indicado pela escola.</p></li></ol>
 <a href="https://docs.github.com/en/pages/quickstart" target="_blank" rel="noopener noreferrer">Guia oficial do GitHub Pages ↗</a>
 </section>
 <section id="enviar" class="section submission" aria-labelledby="enviar-titulo">
 <h2 id="enviar-titulo">Enviar um jogo</h2>
-<p>Use seu nome de apresentação ou o nome da equipe. A ficha entra no catálogo após revisão.</p>
-<form id="ficha">
+<p id="orientacao-ficha">Use um nome de equipe que não identifique alunos ou deixe a autoria em branco. Evite incluir nome completo, contato, matrícula, fotos ou outros dados pessoais na ficha e no jogo.</p>
+<form id="ficha" autocomplete="off" aria-describedby="orientacao-ficha">
 <div class="form-grid">
 <label>Título do jogo<input name="titulo" required maxlength="70"></label>
-<label>Autoria ou equipe<input name="autoria" required maxlength="70"></label>
+<label>Nome da equipe (opcional)<input name="autoria" maxlength="70"></label>
 <label>Link no GitHub Pages<input name="url" type="url" required placeholder="https://usuario.github.io/meu-jogo/"></label>
 <label>Categoria<select name="categoria" id="ficha-categoria" required><option value="">Selecione uma categoria</option></select></label>
 </div>
 <label>Descrição curta<textarea name="descricao" required maxlength="180" rows="3" placeholder="O que a pessoa vai jogar?"></textarea></label>
-<div class="actions"><button class="button" type="submit">Baixar ficha</button><button class="button secondary" type="submit" id="enviar-github" value="github" hidden>Abrir envio no GitHub ↗</button></div>
+<div class="actions"><button class="button" type="submit">Baixar ficha</button><a href="#privacidade">Como usamos a ficha</a></div>
 <p id="resultado" role="status"></p>
 </form>
+</section>
+<section id="privacidade" class="section guide" aria-labelledby="privacidade-titulo">
+<h2 id="privacidade-titulo">Privacidade</h2>
+<p>O formulário gera um arquivo no seu dispositivo. O portal não envia a ficha pela internet. Para pedir a inclusão de um jogo, entregue o arquivo ao professor pelo canal privado indicado pela escola. Após revisão, título, categoria, descrição, link e nome de equipe, se informado, podem aparecer no catálogo público.</p>
+<p>O portal não usa ferramentas de publicidade ou análise de audiência. Ele é hospedado no GitHub Pages. Ao abrir um jogo, você acessa o site do autor, que pode ter suas próprias práticas de privacidade.</p>
+<p>Para pedir acesso, correção ou retirada de informações do catálogo, ou comunicar uma exposição de dados, procure a secretaria do Colégio Estadual Adaguismar de Oliveira pelos canais institucionais da escola.</p>
 </section>
 </main>
 <footer><div class="wrap"><strong>Arcade Adaguismar</strong><span>Colégio Estadual Adaguismar de Oliveira</span></div></footer>
