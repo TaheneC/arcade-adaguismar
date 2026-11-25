@@ -2,7 +2,7 @@
 
 Portal de jogos do **Colégio Estadual Adaguismar de Oliveira**. Alunos e professores podem compartilhar jogos criados na escola. O catálogo permite buscar por título ou autoria, filtrar por categoria e abrir cada jogo no navegador.
 
-**[Acesse o portal](https://tahenec.github.io/arcade-adaguismar/)**
+**[Acesse o Arcade Adaguismar](https://tahenec.github.io/arcade-adaguismar/)**
 
 ## Como publicar e enviar seu jogo
 
