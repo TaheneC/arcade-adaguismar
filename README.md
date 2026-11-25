@@ -27,5 +27,3 @@ Cada jogo permanece hospedado na conta de quem o publicou. O portal reúne os li
 - [`catalogo.js`](catalogo.js) reúne as fichas aprovadas.
 
 O portal é feito com HTML, CSS e JavaScript e publicado pelo GitHub Pages a partir da raiz da branch `main`.
-
-Referência do projeto: [Portal Pixel](https://hebersonmiliano.github.io/portal-jogos/index.html).
